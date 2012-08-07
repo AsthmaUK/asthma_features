@@ -1,0 +1,3 @@
+<?php
+
+include_once('asthma_blog_feature.features.inc');
