@@ -1,0 +1,32 @@
+<?php
+
+include_once('asthma_uk_book_pages.features.inc');
+
+/**
+ * Implementation of hook_og_features_registry()
+ */
+function asthma_uk_book_pages_og_features_registry() {
+  $registry = array();
+  
+  // Feature: asthma_uk_book_pages
+  $feature = new stdClass;
+  $feature->id = 'asthma_uk_book_pages';
+  $feature->name = t('Books');
+  $feature->description = t('Enable your group members to create book entries relevant to your group.');
+  $feature->components = array(
+    'views' => array(
+      'group_tab_book_pages',
+    ),
+    'node' => array(
+      'book',
+    ),
+    'context' => array(
+      'group-tab-book-page',
+      'group-book-page-node',
+    ),
+  );
+  $registry[$feature->id] = $feature;
+  
+  return $registry;
+}
+
