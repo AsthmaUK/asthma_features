@@ -17,7 +17,7 @@ function asthma_blog_feature_content_default_fields() {
         'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'thumbnail_100_linked',
+        'format' => 'thumbnail_100_default',
         'exclude' => 0,
       ),
       'full' => array(
