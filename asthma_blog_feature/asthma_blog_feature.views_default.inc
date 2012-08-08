@@ -43,6 +43,7 @@ function asthma_blog_feature_views_default_views() {
     'comments' => 0,
   ));
   $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->override_option('title', 'Asthma Blog');
   $handler->override_option('row_options', array(
     'relationship' => 'none',
     'build_mode' => 'full',
